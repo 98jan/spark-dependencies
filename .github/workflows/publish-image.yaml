@@ -29,7 +29,7 @@ jobs:
       - name: Compute Tags
         id: compute-tags
         run: |
-          prefix="ghcr.io/jaegertracing/spark-dependencies/spark-dependencies"
+          prefix="ghcr.io/${{ github.repository }}/${{ github.event.repository.name }}"
           tags="$prefix:latest"
           
           if [[ -n "${{ inputs.tag }}" ]]; then
